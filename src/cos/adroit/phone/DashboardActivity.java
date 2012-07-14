@@ -16,8 +16,6 @@
 
 package cos.adroit.phone;
 
-import com.wglxy.example.dash1.R;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;

@@ -25,7 +25,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.TabHost;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.wglxy.example.dash1.R;
 
 /**
  * This demonstrates how you can implement switching between the tabs of a

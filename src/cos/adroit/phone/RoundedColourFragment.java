@@ -24,7 +24,7 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.LinearLayout;
 import com.actionbarsherlock.app.SherlockFragment;
-import com.wglxy.example.dash1.R;
+
 
 public class RoundedColourFragment extends SherlockFragment {
 

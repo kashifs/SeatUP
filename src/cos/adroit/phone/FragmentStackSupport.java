@@ -27,7 +27,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.wglxy.example.dash1.R;
 
 public class FragmentStackSupport extends SherlockFragmentActivity {
     int mStackLevel = 1;

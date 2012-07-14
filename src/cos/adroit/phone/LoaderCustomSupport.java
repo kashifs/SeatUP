@@ -55,7 +55,7 @@ import com.actionbarsherlock.app.SherlockListFragment;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
-import com.wglxy.example.dash1.R;
+
 
 /**
  * Demonstration of the implementation of a custom Loader.

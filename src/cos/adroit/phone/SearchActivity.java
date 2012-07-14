@@ -16,7 +16,7 @@
 
 package cos.adroit.phone;
 
-import com.wglxy.example.dash1.R;
+
 
 import android.os.Bundle;
 
