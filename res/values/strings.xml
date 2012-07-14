@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2011 Wglxy.com
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources>
+
+    <string name="hello">Choose one of the features below.</string>
+    <string name="app_name">Dashboard Demo</string>
+    <string name="description_logo">Demo</string>
+    <string name="description_about">About</string>
+    <string name="description_home">Home</string>
+    <string name="description_search">Search</string>
+    <string name="description_mytables">My Tables</string>
+    <string name="description_addtable">Add Table</string>
+    <string name="description_mygoals">My Goals</string>
+    <string name="description_settings">Settings</string>
+    <string name="title_about">About</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_mytables">My Tables</string>
+    <string name="title_addtable">Add Table</string>
+    <string name="title_mygoals">My Goals</string>
+    <string name="title_settings">Settings</string>
+    <string name="default_intro">This is the default content view for an activity. Be sure to change your activity\'s onCreate method. Use setContentView on a custom layout.</string>
+    <string name="feature1_intro">Feature 1 content goes here.</string>
+    <string name="feature2_intro">Feature 2 content goes here.</string>
+    <string name="feature3_intro">Feature 3 content goes here.</string>
+    <string name="feature4_intro">Feature 4 content goes here.</string>
+    <string name="about_intro">This app is a demo to show you how to do an Android app based on the Dashboard pattern that has been used in apps like Twitter, Google IO, and Evernote.</string>
+    <string name="search_intro">Content for the Search page goes here.</string>
+    <string name="action_label_refresh">Refresh</string>
+    <string name="action_label_search">Search</string>
+    <string name="action_label_both">Both</string>
+    <string name="action_label_text">Text</string>
+    <string name="app_name">Android Developers</string>
+    <string name="action_label_logo">Logo</string>
+    <string name="action_label_up">Up</string>
+    <string name="action_label_nav_tabs">Tabs</string>
+    <string name="action_label_nav_drop_down">List</string>
+    <string name="action_label_nav_label">Label</string>
+    <string name="action_label_nav">Navigation Mode &amp;gt;</string>
+    <string name="action_label_bak">Action Bar Background &amp;gt;</string>
+    <string name="action_label_bak_none">None</string>
+    <string name="action_label_bak_gradient">Gradient</string>
+    <string name="action_label_bak_image">Image</string>
+
+    <string-array name="restaurants_array">
+        <item>5 &amp; Diner</item>
+        <item>Frontera Mex-Mex Grill</item>
+        <item>Pasta Pomodoro</item>
+        <item>99 Restaurant</item>
+        <item>Fuddruckers</item>
+        <item>Pat\'s Family Restaurant</item>
+        <item>A&amp;W Restaurant</item>
+        <item>Furr\'s</item>
+        <item>Paul Revere\'s Pizza</item>
+        <item>Abby\'s Legendary Pizza</item>
+        <item>Gambino\'s Pizza</item>
+        <item>Pax Wholesome Food</item>
+        <item>Abuelo\'s Mexican Food Embassy</item>
+        <item>Garfield\'s Restaurant &amp; Pub</item>
+        <item>Pei Wei</item>
+        <item>Acapulco</item>
+        <item>Garlic Jim\'s Famous Gourmet Pizza</item>
+        <item>Pepe\'s Mexican Restaurant</item>
+        <item>Amante Pizza &amp; Pasta</item>
+        <item>Gatti\'s Pizza</item>
+        <item>Perkins Restaurant &amp; Bakery</item>
+        <item>Amarillo Mesquite Grill</item>
+        <item>Giordano\'s</item>
+        <item>Piccadilly Cafeteria</item>
+        <item>Ameci Pizza &amp; Pasta</item>
+        <item>Glory Days Grill</item>
+        <item>Pick Up Stix</item>
+        <item>Applebee\'s</item>
+        <item>Green Mill</item>
+        <item>Pizza Boli\'s</item>
+        <item>Atlanta Bread Company</item>
+        <item>Groucho\'s Deli</item>
+        <item>Pizza Guys</item>
+        <item>Aurelio\'s is Pizza</item>
+        <item>Gumby\'s Pizza</item>
+        <item>Pizza Hut</item>
+        <item>Austin\'s Pizza</item>
+        <item>Hacienda Mexican Restaurant</item>
+        <item>Pizza Inn</item>
+        <item>Azteca</item>
+        <item>Happy Chef</item>
+        <item>Pizza K</item>
+        <item>Bad Ass Coffee Co.</item>
+        <item>Happy Joe\'s</item>
+        <item>Pizza King</item>
+        <item>Baja Fresh Mexican Grill</item>
+        <item>Hard Rock Cafe</item>
+        <item>Pizza Patron</item>
+        <item>Bakers Square Restaurant &amp; Pies</item>
+        <item>Hard Times Cafe</item>
+        <item>Pizza Pit</item>
+        <item>Bandana\'s BBQ</item>
+        <item>Hibachi-San</item>
+        <item>Pizza Pro</item>
+        <item>Bar Louie</item>
+        <item>Hooters</item>
+        <item>Pizza Schmizza</item>
+        <item>Beef \'O\' Brady\'s</item>
+        <item>Hops Restaurant</item>
+        <item>PoFolks</item>
+        <item>Bellacino\'s Pizza &amp; Grinders</item>
+        <item>Houlihan\'s</item>
+        <item>Pollo Tropical</item>
+        <item>Benihana</item>
+        <item>Houston\'s</item>
+        <item>Ponderosa Steak House</item>
+        <item>Bennigan\'s Grill &amp; Tavern</item>
+        <item>Huddle House</item>
+        <item>Quaker Steak &amp; Lube</item>
+        <item>Bertucci\'s Italian Restaurant</item>
+        <item>Hudson\'s Classic Grill</item>
+        <item>Quiznos</item>
+        <item>Bickford\'s Family Restaurant</item>
+        <item>Hungry Howie\'s Pizza</item>
+        <item>Quiznos Sub</item>
+        <item>Big Boy Restaurants</item>
+        <item>Hurricane Grill &amp; Wings</item>
+        <item>Rainforest Cafe</item>
+        <item>Bill Miller BBQ</item>
+        <item>IHOP</item>
+        <item>Razzoo\'s</item>
+        <item>BJ\'s Restaurant &amp; Brewhouse</item>
+        <item>Imo\'s Pizza</item>
+        <item>Red Lobster</item>
+        <item>Black Angus Steakhouse</item>
+        <item>Insomnia Cookies</item>
+        <item>Red Robin</item>
+        <item>Black Bear Diner</item>
+        <item>Islands Fine Burgers &amp; Drinks</item>
+        <item>Rib City Grill</item>
+        <item>Black Eyed Pea</item>
+        <item>Ivar\'s Seafood Restaurant</item>
+        <item>Rib Crib</item>
+        <item>Blackjack Pizza</item>
+        <item>Jerry &amp; Joe\'s Pizzeria</item>
+        <item>Rock Bottom Restaurant &amp; Brewery</item>
+        <item>Bob Evans</item>
+        <item>Jet\'s Pizza</item>
+        <item>Rocky Rococo</item>
+        <item>Bonefish Grill</item>
+        <item>Jillian\'s</item>
+        <item>Roly Poly Sandwiches</item>
+        <item>Boston\'s Gourmet Pizza</item>
+        <item>Joe\'s Crab Shack</item>
+        <item>Rosati\'s Pizza</item>
+        <item>Bravo! Cucina Italiana</item>
+        <item>Johnny Rockets</item>
+        <item>Round Table Pizza</item>
+        <item>Buca Di Beppo	</item>
+        <item>Johnny\'s Pizza</item>
+        <item>Roy\'s</item>
+        <item>Buffalo\'s Southwest Cafe</item>
+        <item>Kettle Restaurant</item>
+        <item>Royal Waffel King</item>
+        <item>Cajun Cafe &amp; Grill</item>
+        <item>Kona Grill</item>
+        <item>Rubio\'s</item>
+        <item>California Pizza Kitchen</item>
+        <item>Koo Koo Roo</item>
+        <item>Ruby Tuesdays</item>
+        <item>California Tortilla</item>
+        <item>Kyoto Bowl</item>
+        <item>Ruth\'s Chris Steak House</item>
+        <item>Cantina Laredo</item>
+        <item>La Madeleine</item>
+        <item>Ryan\'s</item>
+        <item>Captain D\'s Seafood</item>
+        <item>La Pizza Loca</item>
+        <item>Salsarita\'s</item>
+        <item>Carino\'s Italian</item>
+        <item>La Salsa</item>
+        <item>Saltgrass Steak House</item>
+        <item>Carlos O\'Kelly\'s</item>
+        <item>Lamppost Pizza</item>
+        <item>Sam &amp; Louie\'s New York Pizzeria</item>
+        <item>Carrabba\'s Italian Grill</item>
+        <item>LaRosa\'s Pizzeria</item>
+        <item>Sarku Japan</item>
+        <item>Carrows</item>
+        <item>Larry\'s Giant Subs</item>
+        <item>Shane\'s Rib Shack</item>
+        <item>Charlie Brown\'s Steakhouse</item>
+        <item>Ledo Pizza</item>
+        <item>Shari\'s Restaurant</item>
+        <item>Cheeburger Cheeburger</item>
+        <item>Lee\'s Famous Recipe Chicken</item>
+        <item>Shoney\'s Restaurant</item>
+        <item>Cheeseburger In Paradise</item>
+        <item>Legal Sea Foods</item>
+        <item>Sicilia\'s Pizzeria</item>
+        <item>Chicken Out Rotisserie</item>
+        <item>Lenny\'s Sub Shop</item>
+        <item>Silver Diner</item>
+        <item>Chili\'s</item>
+        <item>Leona\'s</item>
+        <item>Sirloin Stockade</item>
+        <item>China Wok</item>
+        <item>Lion\'s Choice</item>
+        <item>Smokey Bones</item>
+        <item>Claim Jumper</item>
+        <item>Logan\'s Roadhouse</item>
+        <item>Snappy Tomato Pizza</item>
+        <item>Coco\'s Bakery Restaurant</item>
+        <item>Lone Star Steakhouse &amp; Saloon</item>
+        <item>Sonic</item>
+        <item>Copeland\'s</item>
+        <item>LongHorn Steakhouse</item>
+        <item>Sonic Drive-In</item>
+        <item>Corky\'s Ribs &amp; BBQ</item>
+        <item>Los Cucos</item>
+        <item>Sonny\'s Bar-B-Q</item>
+        <item>Cottage Inn Pizza</item>
+        <item>Lou Malnati\'s Pizza</item>
+        <item>Steak \'n Shake</item>
+        <item>Cotton Patch Cafe</item>
+        <item>Luby\'s</item>
+        <item>Steak-Out</item>
+        <item>Country Kitchen</item>
+        <item>Maggiano\'s Little Italy</item>
+        <item>Sticky Fingers Smokehouse</item>
+        <item>Cracker Barrel Old Country Store</item>
+        <item>Mama Ninfa\'s</item>
+        <item>Stir Crazy</item>
+        <item>Culver\'s</item>
+        <item>Margaritas</item>
+        <item>Stuft Pizza</item>
+        <item>Daily Grill</item>
+        <item>Marie Callender\'s</item>
+        <item>T.G.I. Friday\'s</item>
+        <item>Damon\'s Grill</item>
+        <item>Max &amp; Erma\'s</item>
+        <item>Taco Del Mar</item>
+        <item>Davanni\'s</item>
+        <item>McCormick &amp; Schmick\'s</item>
+        <item>Taco Mac</item>
+        <item>Dave &amp; Buster\'s</item>
+        <item>Mellow Mushroom</item>
+        <item>Tacone Flavor Grill</item>
+        <item>Denny\'s</item>
+        <item>Melting Pot</item>
+        <item>Texas Roadhouse</item>
+        <item>Desert Moon Cafe</item>
+        <item>Milio\'s Sandwiches</item>
+        <item>Texas Steakhouse &amp; Saloon</item>
+        <item>Dickey\'s Barbecue Pit</item>
+        <item>Mimi\'s Cafe</item>
+        <item>TGI Friday\'s</item>
+        <item>Dippin\' Dots</item>
+        <item>Mo-Jo\'s Wings</item>
+        <item>The Capital Grille</item>
+        <item>Dolly\'s Pizza</item>
+        <item>Monicals Pizza</item>
+        <item>The Cheesecake Factory</item>
+        <item>Domino\'s Pizza</item>
+        <item>Montana Mike\'s Steakhouse</item>
+        <item>The Flame Broiler</item>
+        <item>Don Pablo\'s</item>
+        <item>Morton\'s The Steakhouse</item>
+        <item>The Loop Pizza Grill</item>
+        <item>Donato\'s Pizza</item>
+        <item>Mountain Mike\'s Pizza</item>
+        <item>The Old Spaghetti Factory</item>
+        <item>DoubleDave\'s Pizza Works</item>
+        <item>Mr. Jim\'s Pizza</item>
+        <item>The Original Pancake House</item>
+        <item>East of Chicago Pizza</item>
+        <item>Mr. Pita</item>
+        <item>The Pasta House Co.</item>
+        <item>Eat N\' Park</item>
+        <item>Murphy\'s Deli</item>
+        <item>The Pita Pit</item>
+        <item>Edo Japan</item>
+        <item>Natural Chicken Grill</item>
+        <item>The Spaghetti Warehouse</item>
+        <item>El Chico</item>
+        <item>Nature\'s Table</item>
+        <item>Tijuana Flats</item>
+        <item>El Fenix Mexican Restaurant</item>
+        <item>O\'Charley\'s</item>
+        <item>Tony Romas</item>
+        <item>El Torito</item>
+        <item>Oberweis Dairy</item>
+        <item>Toojay\'s Gourmet Deli</item>
+        <item>Elephant Bar Restaurant</item>
+        <item>Old Chicago</item>
+        <item>Topper\'s Pizza</item>
+        <item>Elliotts\' Off Broadway Deli</item>
+        <item>Olga\'s Kitchen</item>
+        <item>Tumbleweed Tex Mex Grill</item>
+        <item>Elmer\'s Restaurant</item>
+        <item>Olive Garden Italian Restaurant</item>
+        <item>Una Mas</item>
+        <item>Eureka Pizza</item>
+        <item>On The Border Mexican Grill</item>
+        <item>Uno Chicago Grill</item>
+        <item>Extreme Pizza</item>
+        <item>Original Roadhouse Grill</item>
+        <item>Valentino\'s</item>
+        <item>Famous Dave\'s</item>
+        <item>Outback Steakhouse</item>
+        <item>Village Inn</item>
+        <item>FATZ</item>
+        <item>P.F. Chang\'s</item>
+        <item>Vocelli Pizza</item>
+        <item>Figaro\'s Pizza</item>
+        <item>Pagliacci</item>
+        <item>Waffle House</item>
+        <item>Fire Mountian</item>
+        <item>Pagliai\'s Pizza</item>
+        <item>Wahoo\'s Fish Taco</item>
+        <item>Firehouse Subs</item>
+        <item>Panchero\'s</item>
+        <item>Western Sizzlin</item>
+        <item>First Watch Restaurants</item>
+        <item>Papa Gino\'s</item>
+        <item>Westshore Pizza</item>
+        <item>Flamers Charbroiled Burgers</item>
+        <item>Papa John\'s Pizza</item>
+        <item>Willy\'s Mexicana Grill</item>
+        <item>Fleming\'s Prime Steakhouse &amp; Wine Bar</item>
+        <item>Papa Murphy\'s</item>
+        <item>Wing Zone</item>
+        <item>Fox and Hound</item>
+        <item>Papa Razzi Trattoria &amp; Bar</item>
+        <item>Wok \'n Roll</item>
+        <item>Fox\'s Pizza Den</item>
+        <item>Papas Pizza To Go</item>
+        <item>Wolfgang Puck Restaurant</item>
+        <item>Frank &amp; Stein Dogs &amp; Draft</item>
+        <item>Pappadeaux</item>
+        <item>Woody\'s BBQ</item>
+        <item>Friendly\'s</item>
+        <item>Pasta Bravo</item>
+        <item>ZPizza</item>
+    </string-array>
+
+    <string name="application_name">ActionBarSherlock Fragments</string>
+    <string name="activity_sample_code">ABS: Fragments</string>
+    <string name="hello_world"><b>Hello, <i>World!</i></b></string>
+    <string name="alert_dialog_two_buttons_title">        Lorem ipsum dolor sit aie consectetur adipiscing\nPlloaso mako nuto
+        siwuf cakso dodtos anr koop.</string>
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_cancel">Cancel</string>
+    <string name="initial_text">Initial text.</string>
+    <string name="pick_result">Pick a result to send, or BACK to cancel.</string>
+    <string name="corky">Corky</string>
+    <string name="violet">Violet</string>
+    <string name="receive_result_instructions">Press the button to get an activity result, which will be displayed here:</string>
+    <string name="receive_result_result">Get Result</string>
+    <string name="fragment_alert_dialog_support">Alert Dialog</string>
+    <string name="fragment_arguments_support">Arguments</string>
+    <string name="fragment_arguments_msg">Demonstrates a fragment that takes arguments
+        as a Bundle at runtime (on the right) or from attributes in a layout (on the left).</string>
+    <string name="fragment_arguments_embedded">From Attributes</string>
+    <string name="fragment_arguments_embedded_land">Landscape Only</string>
+    <string name="fragment_custom_animation_support">Custom Animation</string>
+    <string name="fragment_hide_show_support">Hide and Show</string>
+    <string name="fragment_context_menu_support">Context Menu</string>
+    <string name="fragment_context_menu_msg">Fragment populating a context
+            menu; long press the button to see.</string>
+    <string name="long_press">Long press me</string>
+    <string name="fragment_dialog_support">Dialog</string>
+    <string name="show">Show</string>
+    <string name="fragment_dialog_or_activity_support">Dialog or Activity</string>
+    <string name="fragment_dialog_or_activity_msg">Demonstrates the same fragment
+            being shown as a dialog and embedded inside of an activity.</string>
+    <string name="fragment_dialog_or_activity_inline">Fragment embedded inside
+            of the activity:</string>
+    <string name="fragment_layout_support">Layout</string>
+    <string name="fragment_list_array_support">List Array</string>
+    <string name="fragment_menu_support">Menu</string>
+    <string name="fragment_menu_msg">Build menus from two fragments, allowing
+        you to hide them to remove them..</string>
+    <string name="fragment1menu">Show fragment 1 menu</string>
+    <string name="fragment2menu">Show fragment 2 menu</string>
+    <string name="fragment_retain_instance_support">Retain Instance</string>
+    <string name="fragment_retain_instance_msg">Current progress of retained fragment;
+    restarts if fragment is re-created.</string>
+    <string name="restart">Restart</string>
+    <string name="fragment_receive_result_support">Receive Result</string>
+    <string name="fragment_stack_support">Stack</string>
+    <string name="new_fragment">New fragment</string>
+    <string name="fragment_tabs">Tabs</string>
+    <string name="fragment_tabs_pager">Tabs and Pager</string>
+    <string name="fragment_pager_support">Pager</string>
+    <string name="first">First</string>
+    <string name="last">Last</string>
+    <string name="fragment_state_pager_support">State Pager</string>
+
+</resources>
