@@ -20,7 +20,7 @@
         <activity
             android:name=".MyTablesActivity"
             android:label="@string/title_mytables"
-            android:theme="@style/Theme.Sherlock.Light" />
+            android:theme="@style/Theme.D1" />
         <activity
             android:name=".MyGoalsActivity"
             android:label="@string/title_mygoals"

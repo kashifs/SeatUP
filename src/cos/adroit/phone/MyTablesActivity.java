@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2011 The Android Open Source Project
+ * Copyright (C) 2011 Wglxy.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,167 +13,111 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package cos.adroit.phone;
 
 
-import java.util.HashMap;
-import android.content.Context;
+
+import android.R.layout;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
-import android.view.View;
-import android.widget.TabHost;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
+import android.view.WindowManager.LayoutParams;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 /**
- * This demonstrates how you can implement switching between the tabs of a
- * TabHost through fragments.  It uses a trick (see the code below) to allow
- * the tabs to switch between fragments instead of simple views.
+ * This is a simple activity that demonstrates the dashboard user interface pattern.
+ *
  */
-public class MyTablesActivity extends SherlockFragmentActivity {
-    TabHost mTabHost;
-    TabManager mTabManager;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        setTheme(SampleList.THEME); //Used for theme switching in samples
-        super.onCreate(savedInstanceState);
+public class MyTablesActivity extends DashboardActivity 
+{
 
-        setContentView(R.layout.fragment_tabs);
-        mTabHost = (TabHost)findViewById(android.R.id.tabhost);
-        mTabHost.setup();
+	/**
+	 * onCreate - called when the activity is first created.
+	 * Called when the activity is first created. 
+	 * This is where you should do all of your normal static set up: create views, bind data to lists, etc. 
+	 * This method also provides you with a Bundle containing the activity's previously frozen state, if there was one.
+	 * 
+	 * Always followed by onStart().
+	 *
+	 */
 
-        mTabManager = new TabManager(this, mTabHost, R.id.realtabcontent);
+	protected void onCreate(Bundle savedInstanceState) 
+	{
+		super.onCreate(savedInstanceState);
 
-        Bundle args = new Bundle();
-        args.putInt("num", 100);
-        
-        
-        
-        
-        mTabManager.addTab(mTabHost.newTabSpec("Table 1").setIndicator("Table 1"),
-                FragmentStackSupport.CountingFragment.class, args);
-        mTabManager.addTab(mTabHost.newTabSpec("Table 2").setIndicator("Table 2"),
-        		FragmentStackSupport.CountingFragment.class, null);
-        mTabManager.addTab(mTabHost.newTabSpec("Table 3").setIndicator("Table 3"),
-        		FragmentStackSupport.CountingFragment.class, args);
-        mTabManager.addTab(mTabHost.newTabSpec("Table 4").setIndicator("Table 4"),
-        		FragmentStackSupport.CountingFragment.class, null);
-                
+		int numCustomers = 7;
+		
+		if(numCustomers == 1)
+			setContentView(R.layout.activity_home);
+		
+		else if(numCustomers == 2)
+			setContentView(R.layout.two_table_layout);
+		
+		else if(numCustomers == 3)
+			setContentView(R.layout.three_table_layout);
+		
+		else if(numCustomers == 4)
+			setContentView(R.layout.four_table_layout);
+		
+		else if(numCustomers == 5)
+			setContentView(R.layout.five_table_layout);
+		
+		else if(numCustomers == 6)
+			setContentView(R.layout.six_table_layout);
+		
+		else if(numCustomers == 7)
+			setContentView(R.layout.seven_table_layout);
+		
+		else if(numCustomers == 8)
+			setContentView(R.layout.eight_table_layout);
 
-        
 
-        if (savedInstanceState != null) {
-            mTabHost.setCurrentTabByTag(savedInstanceState.getString("tab"));
-        }
-    }
+	}
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putString("tab", mTabHost.getCurrentTabTag());
-    }
+	/**
+	 * onDestroy
+	 * The final call you receive before your activity is destroyed. 
+	 * This can happen either because the activity is finishing (someone called finish() on it, 
+	 * or because the system is temporarily destroying this instance of the activity to save space. 
+	 * You can distinguish between these two scenarios with the isFinishing() method.
+	 *
+	 */
 
-    /**
-     * This is a helper class that implements a generic mechanism for
-     * associating fragments with the tabs in a tab host.  It relies on a
-     * trick.  Normally a tab host has a simple API for supplying a View or
-     * Intent that each tab will show.  This is not sufficient for switching
-     * between fragments.  So instead we make the content part of the tab host
-     * 0dp high (it is not shown) and the TabManager supplies its own dummy
-     * view to show as the tab content.  It listens to changes in tabs, and takes
-     * care of switch to the correct fragment shown in a separate content area
-     * whenever the selected tab changes.
-     */
-    public static class TabManager implements TabHost.OnTabChangeListener {
-        private final FragmentActivity mActivity;
-        private final TabHost mTabHost;
-        private final int mContainerId;
-        private final HashMap<String, TabInfo> mTabs = new HashMap<String, TabInfo>();
-        TabInfo mLastTab;
+	protected void onDestroy ()
+	{
+		super.onDestroy ();
+	}
 
-        static final class TabInfo {
-            private final String tag;
-            private final Class<?> clss;
-            private final Bundle args;
-            private Fragment fragment;
 
-            TabInfo(String _tag, Class<?> _class, Bundle _args) {
-                tag = _tag;
-                clss = _class;
-                args = _args;
-            }
-        }
+	protected void onPause ()
+	{
+		super.onPause ();
+	}
 
-        static class DummyTabFactory implements TabHost.TabContentFactory {
-            private final Context mContext;
+	protected void onRestart ()
+	{
+		super.onRestart ();
+	}
 
-            public DummyTabFactory(Context context) {
-                mContext = context;
-            }
 
-            @Override
-            public View createTabContent(String tag) {
-                View v = new View(mContext);
-                v.setMinimumWidth(0);
-                v.setMinimumHeight(0);
-                return v;
-            }
-        }
+	protected void onResume ()
+	{
+		super.onResume ();
+	}
 
-        public TabManager(FragmentActivity activity, TabHost tabHost, int containerId) {
-            mActivity = activity;
-            mTabHost = tabHost;
-            mContainerId = containerId;
-            mTabHost.setOnTabChangedListener(this);
-        }
 
-        public void addTab(TabHost.TabSpec tabSpec, Class<?> clss, Bundle args) {
-            tabSpec.setContent(new DummyTabFactory(mActivity));
-            String tag = tabSpec.getTag();
+	protected void onStart ()
+	{
+		super.onStart ();
+	}
 
-            TabInfo info = new TabInfo(tag, clss, args);
 
-            // Check to see if we already have a fragment for this tab, probably
-            // from a previously saved state.  If so, deactivate it, because our
-            // initial state is that a tab isn't shown.
-            info.fragment = mActivity.getSupportFragmentManager().findFragmentByTag(tag);
-            if (info.fragment != null && !info.fragment.isDetached()) {
-                FragmentTransaction ft = mActivity.getSupportFragmentManager().beginTransaction();
-                ft.detach(info.fragment);
-                ft.commit();
-            }
+	protected void onStop ()
+	{
+		super.onStop ();
+	}
 
-            mTabs.put(tag, info);
-            mTabHost.addTab(tabSpec);
-        }
-
-        @Override
-        public void onTabChanged(String tabId) {
-            TabInfo newTab = mTabs.get(tabId);
-            if (mLastTab != newTab) {
-                FragmentTransaction ft = mActivity.getSupportFragmentManager().beginTransaction();
-                if (mLastTab != null) {
-                    if (mLastTab.fragment != null) {
-                        ft.detach(mLastTab.fragment);
-                    }
-                }
-                if (newTab != null) {
-                    if (newTab.fragment == null) {
-                        newTab.fragment = Fragment.instantiate(mActivity,
-                                newTab.clss.getName(), newTab.args);
-                        ft.add(mContainerId, newTab.fragment, newTab.tag);
-                    } else {
-                        ft.attach(newTab.fragment);
-                    }
-                }
-
-                mLastTab = newTab;
-                ft.commit();
-                mActivity.getSupportFragmentManager().executePendingTransactions();
-            }
-        }
-    }
 }
-
