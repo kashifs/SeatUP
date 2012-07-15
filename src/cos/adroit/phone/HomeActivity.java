@@ -25,7 +25,7 @@ import android.os.Bundle;
  *
  */
 
-public class HomeActivity extends DashboardActivity 
+public class HomeActivity extends DashboardActivity
 {
 
 /**

@@ -22,13 +22,15 @@
     android:background="#FFFFFF"
     android:orientation="vertical" >
 
-    <LinearLayout style="@style/TitleBar" >
+    <LinearLayout
+        style="@style/TitleBar"
+        android:layout_width="match_parent" >
 
-        <ImageView
-            android:id="@+id/TitleBar"
-            style="@style/TitleBarLogo"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/title_logo" />
+        <ImageButton
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:onClick="onClickHome"
+            android:src="@drawable/title_home" />
 
         <ImageView style="@style/TitleBarSeparator" />
 

@@ -22,13 +22,15 @@
     android:background="#FFFFFF"
     android:orientation="vertical" >
 
-    <LinearLayout style="@style/TitleBar" >
+    <LinearLayout
+        style="@style/TitleBar"
+        android:layout_width="match_parent" >
 
-        <ImageView
-            android:id="@+id/TitleBar"
-            style="@style/TitleBarLogo"
-            android:contentDescription="@string/description_logo"
-            android:src="@drawable/title_logo" />
+        <ImageButton
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:onClick="onClickHome"
+            android:src="@drawable/title_home" />
 
         <ImageView style="@style/TitleBarSeparator" />
 
@@ -47,29 +49,38 @@
             android:src="@drawable/title_search" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:padding="6dip" >
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="horizontal" >
+            android:orientation="vertical"
+            android:padding="6dip"
+            android:scrollbarAlwaysDrawVerticalTrack="true" >
 
-            <Button
-                android:id="@+id/mytable1"
-                style="@style/HomeButton"
-                android:layout_gravity="top"
-                android:drawableTop="@drawable/table_button"
-                android:onClick="onClickFeature"
-                android:text="@string/table_1" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/mytable1"
+                    style="@style/HomeButton"
+                    android:drawableTop="@drawable/table_button"
+                    android:onClick="onClickFeature"
+                    android:text="@string/table_1" />
+
+            </LinearLayout>
+
+
+
 
         </LinearLayout>
-    </LinearLayout>
 
+    </ScrollView>
 
 </LinearLayout>

@@ -45,54 +45,63 @@
             android:src="@drawable/title_search" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:orientation="vertical"
-        android:padding="6dip" >
+        android:fillViewport="true" >
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="horizontal" >
+            android:orientation="vertical"
+            android:padding="6dip" >
 
-            <Button
-                android:id="@+id/home_btn_mytables"
-                style="@style/HomeButton"
-                android:drawableTop="@drawable/home_button1"
-                android:onClick="onClickFeature"
-                android:text="@string/title_mytables" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
 
-            <Button
-                android:id="@+id/home_btn_addtable"
-                style="@style/HomeButton"
-                android:drawableTop="@drawable/home_button4"
-                android:onClick="onClickFeature"
-                android:text="@string/title_addtable" />
+                <Button
+                    android:id="@+id/home_btn_mytables"
+                    style="@style/HomeButton"
+                    android:drawableTop="@drawable/home_mytable_button"
+                    android:onClick="onClickFeature"
+                    android:text="@string/title_mytables" />
+
+                <Button
+                    android:id="@+id/home_btn_addtable"
+                    style="@style/HomeButton"
+                    android:drawableTop="@drawable/home_addtable_button"
+                    android:onClick="onClickFeature"
+                    android:text="@string/title_addtable" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/home_btn_mygoals"
+                    style="@style/HomeButton"
+                    android:drawableTop="@drawable/home_mygoals_button"
+                    android:onClick="onClickFeature"
+                    android:text="@string/title_mygoals" />
+
+                <Button
+                    android:id="@+id/home_btn_settings"
+                    style="@style/HomeButton"
+                    android:drawableTop="@drawable/home_settings_button"
+                    android:onClick="onClickFeature"
+                    android:text="@string/title_settings" />
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal" >
-
-            <Button
-                android:id="@+id/home_btn_mygoals"
-                style="@style/HomeButton"
-                android:drawableTop="@drawable/home_button2"
-                android:onClick="onClickFeature"
-                android:text="@string/title_mygoals" />
-
-            <Button
-                android:id="@+id/home_btn_settings"
-                style="@style/HomeButton"
-                android:drawableTop="@drawable/home_button3"
-                android:onClick="onClickFeature"
-                android:text="@string/title_settings" />
-        </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

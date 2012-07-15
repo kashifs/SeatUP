@@ -193,7 +193,7 @@ public void onClickFeature (View v)
            startActivity (new Intent(getApplicationContext(), MyTablesActivity.class));
            break;
       case R.id.home_btn_addtable :
-          startActivity (new Intent(getApplicationContext(), MyAboutActivity.class));
+          startActivity (new Intent(getApplicationContext(), AddTableActivity.class));
           break;
       case R.id.home_btn_mygoals :
            startActivity (new Intent(getApplicationContext(), MyGoalsActivity.class));

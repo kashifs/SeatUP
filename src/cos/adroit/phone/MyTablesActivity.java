@@ -50,8 +50,9 @@ public class MyTablesActivity extends DashboardActivity
 
 		int numCustomers = 7;
 		
-		if(numCustomers == 1)
+		if(numCustomers == 1){
 			setContentView(R.layout.activity_home);
+		}
 		
 		else if(numCustomers == 2)
 			setContentView(R.layout.two_table_layout);
@@ -68,8 +69,10 @@ public class MyTablesActivity extends DashboardActivity
 		else if(numCustomers == 6)
 			setContentView(R.layout.six_table_layout);
 		
-		else if(numCustomers == 7)
+		else if(numCustomers == 7){
 			setContentView(R.layout.seven_table_layout);
+			setTitleFromActivityLabel (R.id.title_text);	
+		}
 		
 		else if(numCustomers == 8)
 			setContentView(R.layout.eight_table_layout);
