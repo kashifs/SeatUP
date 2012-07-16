@@ -83,16 +83,16 @@ public class AddTableActivity extends DashboardActivity implements OnItemSelecte
 		iButton9 = (ImageButton) findViewById(R.id.imageButton9);
 		iButton10 = (ImageButton) findViewById(R.id.imageButton10);
 
-		iButton1.setVisibility(View.INVISIBLE);
-		iButton2.setVisibility(View.INVISIBLE);
-		iButton3.setVisibility(View.INVISIBLE);
-		iButton4.setVisibility(View.INVISIBLE);
-		iButton5.setVisibility(View.INVISIBLE);
-		iButton6.setVisibility(View.INVISIBLE);
-		iButton7.setVisibility(View.INVISIBLE);
-		iButton8.setVisibility(View.INVISIBLE);
-		iButton9.setVisibility(View.INVISIBLE);
-		iButton10.setVisibility(View.INVISIBLE);
+		iButton1.setVisibility(View.GONE);
+		iButton2.setVisibility(View.GONE);
+		iButton3.setVisibility(View.GONE);
+		iButton4.setVisibility(View.GONE);
+		iButton5.setVisibility(View.GONE);
+		iButton6.setVisibility(View.GONE);
+		iButton7.setVisibility(View.GONE);
+		iButton8.setVisibility(View.GONE);
+		iButton9.setVisibility(View.GONE);
+		iButton10.setVisibility(View.GONE);
 
 
 
@@ -123,51 +123,51 @@ public class AddTableActivity extends DashboardActivity implements OnItemSelecte
 		
 		if(numClients == 1){
 			iButton1.setVisibility(View.VISIBLE);
-			iButton2.setVisibility(View.INVISIBLE);
-			iButton3.setVisibility(View.INVISIBLE);
-			iButton4.setVisibility(View.INVISIBLE);
-			iButton5.setVisibility(View.INVISIBLE);
-			iButton6.setVisibility(View.INVISIBLE);
-			iButton7.setVisibility(View.INVISIBLE);
-			iButton8.setVisibility(View.INVISIBLE);
-			iButton9.setVisibility(View.INVISIBLE);
-			iButton10.setVisibility(View.INVISIBLE);
+			iButton2.setVisibility(View.GONE);
+			iButton3.setVisibility(View.GONE);
+			iButton4.setVisibility(View.GONE);
+			iButton5.setVisibility(View.GONE);
+			iButton6.setVisibility(View.GONE);
+			iButton7.setVisibility(View.GONE);
+			iButton8.setVisibility(View.GONE);
+			iButton9.setVisibility(View.GONE);
+			iButton10.setVisibility(View.GONE);
 		}
 		else if(numClients == 2){
 			iButton1.setVisibility(View.VISIBLE);
 			iButton2.setVisibility(View.VISIBLE);
-			iButton3.setVisibility(View.INVISIBLE);
-			iButton4.setVisibility(View.INVISIBLE);
-			iButton5.setVisibility(View.INVISIBLE);
-			iButton6.setVisibility(View.INVISIBLE);
-			iButton7.setVisibility(View.INVISIBLE);
-			iButton8.setVisibility(View.INVISIBLE);
-			iButton9.setVisibility(View.INVISIBLE);
-			iButton10.setVisibility(View.INVISIBLE);
+			iButton3.setVisibility(View.GONE);
+			iButton4.setVisibility(View.GONE);
+			iButton5.setVisibility(View.GONE);
+			iButton6.setVisibility(View.GONE);
+			iButton7.setVisibility(View.GONE);
+			iButton8.setVisibility(View.GONE);
+			iButton9.setVisibility(View.GONE);
+			iButton10.setVisibility(View.GONE);
 		}
 		else if(numClients == 3){
 			iButton1.setVisibility(View.VISIBLE);
 			iButton2.setVisibility(View.VISIBLE);
 			iButton3.setVisibility(View.VISIBLE);
-			iButton4.setVisibility(View.INVISIBLE);
-			iButton5.setVisibility(View.INVISIBLE);
-			iButton6.setVisibility(View.INVISIBLE);
-			iButton7.setVisibility(View.INVISIBLE);
-			iButton8.setVisibility(View.INVISIBLE);
-			iButton9.setVisibility(View.INVISIBLE);
-			iButton10.setVisibility(View.INVISIBLE);
+			iButton4.setVisibility(View.GONE);
+			iButton5.setVisibility(View.GONE);
+			iButton6.setVisibility(View.GONE);
+			iButton7.setVisibility(View.GONE);
+			iButton8.setVisibility(View.GONE);
+			iButton9.setVisibility(View.GONE);
+			iButton10.setVisibility(View.GONE);
 		}
 		else if(numClients == 4){
 			iButton1.setVisibility(View.VISIBLE);
 			iButton2.setVisibility(View.VISIBLE);
 			iButton3.setVisibility(View.VISIBLE);
 			iButton4.setVisibility(View.VISIBLE);
-			iButton5.setVisibility(View.INVISIBLE);
-			iButton6.setVisibility(View.INVISIBLE);
-			iButton7.setVisibility(View.INVISIBLE);
-			iButton8.setVisibility(View.INVISIBLE);
-			iButton9.setVisibility(View.INVISIBLE);
-			iButton10.setVisibility(View.INVISIBLE);
+			iButton5.setVisibility(View.GONE);
+			iButton6.setVisibility(View.GONE);
+			iButton7.setVisibility(View.GONE);
+			iButton8.setVisibility(View.GONE);
+			iButton9.setVisibility(View.GONE);
+			iButton10.setVisibility(View.GONE);
 		}
 		else if(numClients == 5){
 			iButton1.setVisibility(View.VISIBLE);
@@ -175,11 +175,11 @@ public class AddTableActivity extends DashboardActivity implements OnItemSelecte
 			iButton3.setVisibility(View.VISIBLE);
 			iButton4.setVisibility(View.VISIBLE);
 			iButton5.setVisibility(View.VISIBLE);
-			iButton6.setVisibility(View.INVISIBLE);
-			iButton7.setVisibility(View.INVISIBLE);
-			iButton8.setVisibility(View.INVISIBLE);
-			iButton9.setVisibility(View.INVISIBLE);
-			iButton10.setVisibility(View.INVISIBLE);
+			iButton6.setVisibility(View.GONE);
+			iButton7.setVisibility(View.GONE);
+			iButton8.setVisibility(View.GONE);
+			iButton9.setVisibility(View.GONE);
+			iButton10.setVisibility(View.GONE);
 		}
 		else if(numClients == 6){
 			iButton1.setVisibility(View.VISIBLE);
@@ -188,10 +188,10 @@ public class AddTableActivity extends DashboardActivity implements OnItemSelecte
 			iButton4.setVisibility(View.VISIBLE);
 			iButton5.setVisibility(View.VISIBLE);
 			iButton6.setVisibility(View.VISIBLE);
-			iButton7.setVisibility(View.INVISIBLE);
-			iButton8.setVisibility(View.INVISIBLE);
-			iButton9.setVisibility(View.INVISIBLE);
-			iButton10.setVisibility(View.INVISIBLE);
+			iButton7.setVisibility(View.GONE);
+			iButton8.setVisibility(View.GONE);
+			iButton9.setVisibility(View.GONE);
+			iButton10.setVisibility(View.GONE);
 		}
 		else if(numClients == 7){
 			iButton1.setVisibility(View.VISIBLE);
@@ -201,9 +201,9 @@ public class AddTableActivity extends DashboardActivity implements OnItemSelecte
 			iButton5.setVisibility(View.VISIBLE);
 			iButton6.setVisibility(View.VISIBLE);
 			iButton7.setVisibility(View.VISIBLE);
-			iButton8.setVisibility(View.INVISIBLE);
-			iButton9.setVisibility(View.INVISIBLE);
-			iButton10.setVisibility(View.INVISIBLE);
+			iButton8.setVisibility(View.GONE);
+			iButton9.setVisibility(View.GONE);
+			iButton10.setVisibility(View.GONE);
 
 		}
 		else if(numClients == 8){
@@ -215,8 +215,8 @@ public class AddTableActivity extends DashboardActivity implements OnItemSelecte
 			iButton6.setVisibility(View.VISIBLE);
 			iButton7.setVisibility(View.VISIBLE);
 			iButton8.setVisibility(View.VISIBLE);
-			iButton9.setVisibility(View.INVISIBLE);
-			iButton10.setVisibility(View.INVISIBLE);
+			iButton9.setVisibility(View.GONE);
+			iButton10.setVisibility(View.GONE);
 		}
 		else if(numClients == 9){
 			iButton1.setVisibility(View.VISIBLE);
@@ -228,7 +228,7 @@ public class AddTableActivity extends DashboardActivity implements OnItemSelecte
 			iButton7.setVisibility(View.VISIBLE);
 			iButton8.setVisibility(View.VISIBLE);
 			iButton9.setVisibility(View.VISIBLE);
-			iButton10.setVisibility(View.INVISIBLE);
+			iButton10.setVisibility(View.GONE);
 		}
 		else if(numClients == 10){
 			iButton1.setVisibility(View.VISIBLE);
