@@ -40,13 +40,13 @@
             style="@style/TitleBarAction"
             android:contentDescription="@string/description_about"
             android:onClick="onClickAbout"
-            android:src="@drawable/title_about" />
+            android:src="@drawable/title_add_table" />
 
         <ImageButton
             style="@style/TitleBarAction"
             android:contentDescription="@string/description_search"
             android:onClick="onClickSearch"
-            android:src="@drawable/title_search" />
+            android:src="@drawable/title_subtract_table" />
     </LinearLayout>
 
     <ScrollView
@@ -70,14 +70,14 @@
                 <Button
                     android:id="@+id/mytable1"
                     style="@style/HomeButton"
-                    android:drawableTop="@drawable/table_button"
+                    android:drawableTop="@drawable/blue_table"
                     android:onClick="onClickFeature"
                     android:text="@string/table_1" />
 
                 <Button
                     android:id="@+id/mytable2"
                     style="@style/HomeButton"
-                    android:drawableTop="@drawable/table_button"
+                    android:drawableTop="@drawable/pink_table"
                     android:onClick="onClickFeature"
                     android:text="@string/table_2" />
             </LinearLayout>
@@ -91,18 +91,18 @@
                 <Button
                     android:id="@+id/mytable3"
                     style="@style/HomeButton"
-                    android:drawableTop="@drawable/table_button"
+                    android:drawableTop="@drawable/pink_table"
                     android:onClick="onClickFeature"
                     android:text="@string/table_3" />
 
                 <Button
                     android:id="@+id/mytable4"
                     style="@style/HomeButton"
-                    android:drawableTop="@drawable/table_button"
+                    android:drawableTop="@drawable/blue_table"
                     android:onClick="onClickFeature"
                     android:text="@string/table_4" />
             </LinearLayout>
-\
+
 
         </LinearLayout>
 

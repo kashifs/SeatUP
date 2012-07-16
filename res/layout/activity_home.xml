@@ -16,13 +16,17 @@
     limitations under the License.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/db1_root"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#FFFFFF"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    tools:context=".HomeActivity" >
 
-    <LinearLayout style="@style/TitleBar" >
+    <LinearLayout
+        style="@style/TitleBar"
+        android:layout_width="match_parent" >
 
         <ImageView
             android:id="@+id/TitleBar"
@@ -31,6 +35,10 @@
             android:layout_weight="30"
             android:contentDescription="@string/description_logo"
             android:src="@drawable/title_logo" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+
+        <TextView style="@style/TitleBarText" />
 
         <ImageButton
             style="@style/TitleBarAction"
@@ -101,7 +109,6 @@
                     android:text="@string/title_settings" />
             </LinearLayout>
         </LinearLayout>
-
     </ScrollView>
 
 </LinearLayout>

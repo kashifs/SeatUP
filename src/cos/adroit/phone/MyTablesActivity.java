@@ -48,34 +48,53 @@ public class MyTablesActivity extends DashboardActivity
 	{
 		super.onCreate(savedInstanceState);
 
-		int numCustomers = 7;
+		TableApp tables = ((TableApp)getApplicationContext());
+		int numTables = tables.size();
 		
-		if(numCustomers == 1){
-			setContentView(R.layout.activity_home);
+		if(numTables == 0){
+			setContentView(R.layout.add_table_layout);
+			setTitleFromActivityLabel (R.id.title_text);
+			
+		}
+		if(numTables == 1){
+			setContentView(R.layout.one_table_layout);
+			setTitleFromActivityLabel (R.id.title_text);
+		}
+		else if(numTables == 2){
+			setContentView(R.layout.two_table_layout);
+			setTitleFromActivityLabel (R.id.title_text);
+			}
+		
+		else if(numTables == 3){
+			setContentView(R.layout.three_table_layout);
+			setTitleFromActivityLabel (R.id.title_text);
 		}
 		
-		else if(numCustomers == 2)
-			setContentView(R.layout.two_table_layout);
-		
-		else if(numCustomers == 3)
-			setContentView(R.layout.three_table_layout);
-		
-		else if(numCustomers == 4)
+		else if(numTables == 4){
 			setContentView(R.layout.four_table_layout);
+			setTitleFromActivityLabel (R.id.title_text);
+		}
+			
 		
-		else if(numCustomers == 5)
+		else if(numTables == 5){
 			setContentView(R.layout.five_table_layout);
+			setTitleFromActivityLabel (R.id.title_text);
+		}
 		
-		else if(numCustomers == 6)
+		else if(numTables == 6){
 			setContentView(R.layout.six_table_layout);
+			setTitleFromActivityLabel (R.id.title_text);
+		}
 		
-		else if(numCustomers == 7){
+		else if(numTables == 7){
 			setContentView(R.layout.seven_table_layout);
 			setTitleFromActivityLabel (R.id.title_text);	
 		}
 		
-		else if(numCustomers == 8)
+		else if(numTables == 8){
 			setContentView(R.layout.eight_table_layout);
+			setTitleFromActivityLabel (R.id.title_text);
+			}
 
 
 	}

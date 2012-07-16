@@ -40,13 +40,13 @@
             style="@style/TitleBarAction"
             android:contentDescription="@string/description_about"
             android:onClick="onClickAbout"
-            android:src="@drawable/title_about" />
+            android:src="@drawable/title_add_table" />
 
         <ImageButton
             style="@style/TitleBarAction"
             android:contentDescription="@string/description_search"
             android:onClick="onClickSearch"
-            android:src="@drawable/title_search" />
+            android:src="@drawable/title_subtract_table" />
     </LinearLayout>
 
     <ScrollView
