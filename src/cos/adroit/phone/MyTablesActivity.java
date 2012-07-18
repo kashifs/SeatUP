@@ -18,13 +18,8 @@ package cos.adroit.phone;
 
 
 
-import android.R.layout;
 import android.os.Bundle;
-import android.view.WindowManager.LayoutParams;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import android.widget.GridView;
 
 /**
  * This is a simple activity that demonstrates the dashboard user interface pattern.
@@ -47,10 +42,17 @@ public class MyTablesActivity extends DashboardActivity
 	protected void onCreate(Bundle savedInstanceState) 
 	{
 		super.onCreate(savedInstanceState);
+		
+		setContentView(R.layout.grid_table_layout);
 
 		TableApp tables = ((TableApp)getApplicationContext());
 		int numTables = tables.size();
 		
+        GridView gridView = (GridView) findViewById(R.id.grid_view);
+        
+        // Instance of ImageAdapter Class
+        gridView.setAdapter(new ImageAdapter(this, numTables));
+/*
 		if(numTables == 0){
 			setContentView(R.layout.one_table_layout);
 			setTitleFromActivityLabel (R.id.title_text);
@@ -96,7 +98,7 @@ public class MyTablesActivity extends DashboardActivity
 			setTitleFromActivityLabel (R.id.title_text);
 			}
 
-
+*/
 	}
 
 	/**

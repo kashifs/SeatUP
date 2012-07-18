@@ -11,13 +11,19 @@ public class ImageAdapter extends BaseAdapter {
     private Context mContext;
  
     // Keep all Images in array
-    public Integer[] mThumbIds = {
-            R.drawable.blue_table, R.drawable.pink_table
-    };
+    public Integer[] mThumbIds;
+    
  
     // Constructor
-    public ImageAdapter(Context c){
+    public ImageAdapter(Context c, int numTables){
         mContext = c;
+        mThumbIds = new Integer[numTables];
+        for(int i = 0; i < numTables; i++){
+        	if(i % 2 == 0)
+        		mThumbIds[i] = R.drawable.blue_table;
+        	else
+        		mThumbIds[i] = R.drawable.pink_table;
+        }
     }
  
     @Override
