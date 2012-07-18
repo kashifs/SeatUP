@@ -35,11 +35,6 @@
         <ImageView style="@style/TitleBarSeparator" />
 
         <TextView style="@style/TitleBarText" />
-
-        <TextView
-            style="@style/TitleBarText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
     </LinearLayout>
 
     <TextView
@@ -48,11 +43,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:text="What shall we call this table?" />
+        android:text="@string/call_this_table_str" />
 
     <Spinner
         android:id="@+id/spinner1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:entries="@array/tablenames_array" />
 
@@ -61,206 +56,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:text="How many clients at this table?" />
+        android:text="@string/how_many_cli_str" />
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView1"
+    <Spinner
+        android:id="@+id/spinner2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:entries="@array/numbers_array" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" >
+    <TextView
+        android:id="@+id/TextView01"
+        style="@style/TitleBarText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/add_orders_now_str" />
 
-            <TextView
-                style="@style/TitleBarTextBig"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:onClick="addNumClients"
-                android:tag="1"
-                android:text="1   " />
-
-            <TextView
-                style="@style/TitleBarTextBig"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:onClick="addNumClients"
-                android:tag="2"
-                android:text="2   " />
-
-            <TextView
-                style="@style/TitleBarTextBig"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:onClick="addNumClients"
-                android:tag="3"
-                android:text="3   " />
-
-            <TextView
-                style="@style/TitleBarTextBig"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:onClick="addNumClients"
-                android:tag="4"
-                android:text="4   " />
-
-            <TextView
-                style="@style/TitleBarTextBig"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:onClick="addNumClients"
-                android:tag="5"
-                android:text="5   " />
-
-            <TextView
-                style="@style/TitleBarTextBig"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:onClick="addNumClients"
-                android:tag="6"
-                android:text="6   " />
-
-            <TextView
-                style="@style/TitleBarTextBig"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:onClick="addNumClients"
-                android:tag="7"
-                android:text="7   " />
-
-            <TextView
-                style="@style/TitleBarTextBig"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:onClick="addNumClients"
-                android:tag="8"
-                android:text="8   " />
-
-            <TextView
-                style="@style/TitleBarTextBig"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:onClick="addNumClients"
-                android:tag="9"
-                android:text="9   " />
-
-            <TextView
-                style="@style/TitleBarTextBig"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:onClick="addNumClients"
-                android:tag="10"
-                android:text="10   " />
-        </LinearLayout>
-    </HorizontalScrollView>
-
-    <ScrollView
-        android:id="@+id/scrollView1"
+    <Spinner
+        android:id="@+id/spinner3"
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:fillViewport="true" >
+        android:layout_height="wrap_content"
+        android:entries="@array/yes_no_array" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <ImageButton
-                    android:id="@+id/imageButton1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon" />
-
-                <ImageButton
-                    android:id="@+id/imageButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <ImageButton
-                    android:id="@+id/imageButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon" />
-
-                <ImageButton
-                    android:id="@+id/imageButton4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon" />
-            </LinearLayout>
-            
-                        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <ImageButton
-                    android:id="@+id/imageButton5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon" />
-
-                <ImageButton
-                    android:id="@+id/imageButton6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon" />
-            </LinearLayout>
-            
-                                    <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <ImageButton
-                    android:id="@+id/imageButton7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon" />
-
-                <ImageButton
-                    android:id="@+id/imageButton8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon" />
-            </LinearLayout>
-            
-                                                <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <ImageButton
-                    android:id="@+id/imageButton9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon" />
-
-                <ImageButton
-                    android:id="@+id/imageButton10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon" />
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="false"
+            android:onClick="createThisTable"
+            android:text="@string/create_this_table_str" />
+    </RelativeLayout>
 
 </LinearLayout>

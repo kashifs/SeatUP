@@ -31,6 +31,7 @@
     <string name="title_search">Search</string>
     <string name="title_mytables">My Tables</string>
     <string name="title_addtable">Add Table</string>
+    <string name="title_addorders">Add Orders</string>
     <string name="title_mygoals">My Goals</string>
     <string name="title_settings">Settings</string>
     <string name="default_intro">This is the default content view for an activity. Be sure to change your activity\'s onCreate method. Use setContentView on a custom layout.</string>
@@ -64,6 +65,39 @@
     <string name="table_8">Table #8</string>
     <string name="table_9">Table #9</string>
     <string name="table_10">Table #10</string>
+    <string name="add_orders_now_str">Add orders now?</string>
+    <string name="how_many_cli_str">How many clients at this table?</string>
+    <string name="call_this_table_str">What should we call this table?</string>
+    <string name="create_this_table_str">Create This Table Now</string>
+    <string name="one_str"> 1   </string>
+    <string name="two_str"> 2   </string>
+    <string name="three_str"> 3   </string>
+    <string name="four_str"> 4   </string>
+    <string name="five_str"> 5   </string>
+    <string name="six_str"> 6   </string>
+    <string name="seven_str"> 7   </string>
+    <string name="eight_str"> 8   </string>
+    <string name="nine_str"> 9   </string>
+    <string name="ten_str"> 10   </string>
+    
+    <string-array name="yes_no_array">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    
+    <string-array name="numbers_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        
+    </string-array>
 
     <string-array name="restaurants_array">
         <item>5 &amp; Diner</item>

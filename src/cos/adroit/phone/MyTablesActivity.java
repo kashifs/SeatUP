@@ -52,7 +52,7 @@ public class MyTablesActivity extends DashboardActivity
 		int numTables = tables.size();
 		
 		if(numTables == 0){
-			setContentView(R.layout.add_table_layout);
+			setContentView(R.layout.one_table_layout);
 			setTitleFromActivityLabel (R.id.title_text);
 			
 		}

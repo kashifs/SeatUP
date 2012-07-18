@@ -35,41 +35,34 @@
         <ImageView style="@style/TitleBarSeparator" />
 
         <TextView style="@style/TitleBarText" />
+
+        <ImageButton
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_about"
+            android:onClick="onClickAbout"
+            android:src="@drawable/title_add_table" />
+
+        <ImageButton
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:onClick="onClickSearch"
+            android:src="@drawable/title_subtract_table" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/titleTextView"
-        style="@style/TitleBarText2"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:layout_weight="0" />
 
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <LinearLayout
+        <GridView
+            android:id="@+id/grid_view"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:padding="6dip"
-            android:scrollbarAlwaysDrawVerticalTrack="true" >
+            android:layout_height="fill_parent"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" >
+        </GridView>
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" >
 
-                <Button
-                    android:id="@+id/mytable1"
-                    style="@style/HomeButton"
-                    android:drawableTop="@drawable/icon"
-                    android:onClick="onClickFeature"
-                    android:text="@string/table_1" />
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+
 
 </LinearLayout>

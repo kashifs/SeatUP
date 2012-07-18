@@ -112,6 +112,35 @@
         <item name="android:singleLine">true</item>
         <item name="android:ellipsize">end</item>
     </style>
+    
+
+    <style name="TitleBarText2">
+        <item name="android:id">@id/title_text</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:paddingLeft">12dip</item>
+        <item name="android:paddingRight">12dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/honeycomb_blue</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    
+        
+    
+        
+
+
+    <style name="TextBody">
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:textColor">@android:color/secondary_text_light</item>
+    </style>
+
+    
 
     <style name="TitleBarTextBig">
         <item name="android:id">@id/title_text</item>
