@@ -23,6 +23,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -58,9 +59,43 @@ public class AddTableActivity extends DashboardActivity implements OnItemSelecte
 		setContentView (R.layout.add_table_layout);
 		setTitleFromActivityLabel (R.id.title_text);
 
-		//    tablenames_array
+		TableApp tables = ((TableApp)getApplicationContext());
 
+		// Array of choices
+		String allNames[] = {"Alpha", "Bravo","Charlie","Delta","Echo","Foxtrot",
+				"Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar",
+				"Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey",
+				"X-ray","Yankee","Zulu"};
+
+		int numFree = 0; //not taken
+
+		for(int i = 0; i < allNames.length; i++){
+			if(!tables.hasTableName(allNames[i]))
+				numFree++;
+		}
+
+		String[] freeNames = new String[numFree];
+
+		int k = 0;
+
+		//allNames.length() = 26
+		for(int i = 0; i < 26; i++){
+			if(!tables.hasTableName(allNames[i]))
+				freeNames[k++] = allNames[i]; 
+		}
+
+
+
+		// Selection of the spinner
 		Spinner sTableName = (Spinner) findViewById(R.id.spinner1);
+
+		// Application of the Array to the Spinner
+		ArrayAdapter<String> spinnerArrayAdapter = 
+				new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, freeNames);
+		spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
+		sTableName.setAdapter(spinnerArrayAdapter);
+
+
 		sTableName.setOnItemSelectedListener(this);
 
 		Spinner sNumClients = (Spinner) findViewById(R.id.spinner2);
@@ -109,8 +144,8 @@ public class AddTableActivity extends DashboardActivity implements OnItemSelecte
 	}
 
 	public void createThisTable(View v){
-		
-		
+
+
 		if(now.equalsIgnoreCase("Yes")){
 			String[] tableData = {tableName, numClients+""};
 			Intent i = new Intent(getApplicationContext(), AddOrdersActivity.class);
@@ -120,15 +155,17 @@ public class AddTableActivity extends DashboardActivity implements OnItemSelecte
 			startActivity (i);			
 		}
 		else{
-			
+
+
 			TableApp tables = ((TableApp)getApplicationContext());
-			tables.addTable(new Table(numClients, tableName));
-			
+			tables.addTable(new Table(numClients, tableName, System.currentTimeMillis()));
+
+
 			Toast toast = Toast.makeText(this, "Table " + tableName + " created. Look in " +
 					"\"My Tables\" to edit this table", Toast.LENGTH_LONG);
 			toast.setGravity(Gravity.CENTER, 0, 0);
 			toast.show();
-			
+
 			finish();
 		}
 

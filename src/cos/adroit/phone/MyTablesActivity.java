@@ -18,7 +18,9 @@ package cos.adroit.phone;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.GridView;
 
 /**
@@ -48,67 +50,18 @@ public class MyTablesActivity extends DashboardActivity
 		TableApp tables = ((TableApp)getApplicationContext());
 		int numTables = tables.size();
 		
+		
         GridView gridView = (GridView) findViewById(R.id.grid_view);
         
+        
         // Instance of ImageAdapter Class
-        gridView.setAdapter(new ImageAdapter(this, numTables));
-/*
-		if(numTables == 0){
-			setContentView(R.layout.one_table_layout);
-			setTitleFromActivityLabel (R.id.title_text);
-			
-		}
-		if(numTables == 1){
-			setContentView(R.layout.one_table_layout);
-			setTitleFromActivityLabel (R.id.title_text);
-		}
-		else if(numTables == 2){
-			setContentView(R.layout.two_table_layout);
-			setTitleFromActivityLabel (R.id.title_text);
-			}
-		
-		else if(numTables == 3){
-			setContentView(R.layout.three_table_layout);
-			setTitleFromActivityLabel (R.id.title_text);
-		}
-		
-		else if(numTables == 4){
-			setContentView(R.layout.four_table_layout);
-			setTitleFromActivityLabel (R.id.title_text);
-		}
-			
-		
-		else if(numTables == 5){
-			setContentView(R.layout.five_table_layout);
-			setTitleFromActivityLabel (R.id.title_text);
-		}
-		
-		else if(numTables == 6){
-			setContentView(R.layout.six_table_layout);
-			setTitleFromActivityLabel (R.id.title_text);
-		}
-		
-		else if(numTables == 7){
-			setContentView(R.layout.seven_table_layout);
-			setTitleFromActivityLabel (R.id.title_text);	
-		}
-		
-		else if(numTables == 8){
-			setContentView(R.layout.eight_table_layout);
-			setTitleFromActivityLabel (R.id.title_text);
-			}
+        gridView.setAdapter(new ImageAdapter(this, numTables, tables.getOrderedTables(), tables));
 
-*/
 	}
-
-	/**
-	 * onDestroy
-	 * The final call you receive before your activity is destroyed. 
-	 * This can happen either because the activity is finishing (someone called finish() on it, 
-	 * or because the system is temporarily destroying this instance of the activity to save space. 
-	 * You can distinguish between these two scenarios with the isFinishing() method.
-	 *
-	 */
+	
+	public void addTable(View v){
+        startActivity (new Intent(getApplicationContext(), AddTableActivity.class));
+	}
 
 	protected void onDestroy ()
 	{

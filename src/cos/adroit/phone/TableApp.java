@@ -17,7 +17,8 @@
 package cos.adroit.phone;
 
 import java.util.HashMap;
-
+import java.util.LinkedList;
+import java.util.PriorityQueue;
 
 import android.app.Application;
 
@@ -27,14 +28,61 @@ import android.app.Application;
  *
  */
 
+
+
 public class TableApp extends Application 
 {
 
-	private HashMap<String, Table> _tables = new HashMap<String, Table>();
 
+	public class NameDate implements Comparable<NameDate>{
+		private long createDate;
+		private String tableName;
+		
+		private NameDate(long createDate, String tableName){
+			this.createDate = createDate;
+			this.tableName = tableName;
+		}
+		
+		public String getString(){
+			return this.tableName;
+		}
+		
+		public long getCreateDate(){
+			return this.createDate;
+		}
+
+
+
+		@Override
+		public int compareTo(NameDate that) {
+			if(this.createDate < that.createDate)
+				return -1;
+			else if (this.createDate > that.createDate)
+				return 1;
+			else
+				return 0;
+		}
+
+	}
+
+
+	private HashMap<String, Table> _tables = new HashMap<String, Table>();
+	private LinkedList<Table> orderedTables = new LinkedList<Table>();
 
 	public void addTable(Table table){
 		_tables.put(table.getTableName(), table);
+		orderedTables.add(table);
+
+	}
+	
+	public Table getTable(String tableName){
+		return _tables.get(tableName);
+	}
+	
+	public boolean hasTableName(String tableName){
+		
+		return _tables.containsKey(tableName);
+		
 	}
 
 
@@ -44,6 +92,11 @@ public class TableApp extends Application
 
 	public int size(){
 		return _tables.size();
+	}
+
+	public LinkedList<Table> getOrderedTables(){
+		return orderedTables;
+
 	}
 
 

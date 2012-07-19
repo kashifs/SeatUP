@@ -29,20 +29,31 @@ import android.util.Log;
 public class Table 
 {
 	private String TAG = "Table";
+	private long _createDate;
 	private int _numClients;
 	private Customer[] _customers;
 	private String _tableName;
 	private final static String _storeURL = "http://www.allmenus.com/pa/philadelphia/64620-papa-johns-pizza/menu/";
 
 	//constructor
-	public Table(int numClients, String tableName){
+	public Table(int numClients, String tableName, long createDate){
 		_numClients = numClients;
 		_customers = new Customer[_numClients];
 		_tableName = tableName;
+		_createDate = createDate;
+		
 	}
 	
 	public String getTableName(){
 		return _tableName;
+	}
+	
+	public long getCreateDate(){
+		return _createDate;
+	}
+	
+	public int getNumClients(){
+		return _numClients;
 	}
 
 

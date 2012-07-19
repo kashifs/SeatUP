@@ -21,7 +21,9 @@
         <activity
             android:name=".MyTablesActivity"
             android:label="@string/title_mytables"
-            android:theme="@style/Theme.D1" />
+            android:theme="@style/Theme.D1"
+            android:launchMode="singleTop"
+            android:noHistory="true" />
         <activity
             android:name=".MyGoalsActivity"
             android:label="@string/title_mygoals"
