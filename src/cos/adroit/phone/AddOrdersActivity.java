@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2011 Wglxy.com
+ * Copyright (C) 2012 Capricorn
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,62 +16,85 @@
 
 package cos.adroit.phone;
 
-
-import android.graphics.Color;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.Window;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
- * This is the activity for feature 4 in the dashboard application.
- * It displays some text and provides a way to get back to the home activity.
- *
+ * 
+ * @author Capricorn
+ * 
  */
+public class AddOrdersActivity extends Activity {
+	//	private static final int[] ITEM_DRAWABLES = { R.drawable.composer_camera, R.drawable.composer_music,
+	//			R.drawable.composer_place, R.drawable.composer_sleep, R.drawable.composer_thought, R.drawable.composer_with };
 
-public class AddOrdersActivity extends DashboardActivity
-{
 
-	/**
-	 * onCreate
-	 *
-	 * Called when the activity is first created. 
-	 * This is where you should do all of your normal static set up: create views, bind data to lists, etc. 
-	 * This method also provides you with a Bundle containing the activity's previously frozen state, if there was one.
-	 * 
-	 * Always followed by onStart().
-	 *
-	 * @param savedInstanceState Bundle
-	 */
 
-	private String tableName, now;
+	private static final int[] ITEM_DRAWABLES = { R.drawable.green_user, R.drawable.blue_user, R.drawable.blue2_user,
+		R.drawable.brown_user, R.drawable.black_user, R.drawable.orange_user, R.drawable.purple_user, R.drawable.red_user,
+		R.drawable.white_user, R.drawable.yellow_user};
+
 	private int numClients;
+	private String tableName;
 
-
-	protected void onCreate(Bundle savedInstanceState) 
-	{
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		
 		Bundle extras = getIntent().getExtras();
 		String[] tableData = extras.getStringArray("tableData");
-	    
-
-		setContentView (R.layout.one_client_layout);
-		setTitleFromActivityLabel (R.id.title_text);
-
-		TextView tv = (TextView) findViewById(R.id.titleTextView);
-		tv.setGravity(Gravity.CENTER_HORIZONTAL);
+		tableName = tableData[0];
+		numClients = Integer.parseInt(tableData[1]);
+		
+		
+		setContentView(R.layout.main);
+		TextView tv = (TextView) findViewById(R.id.tv1);
 		tv.setText(tableData[0]);
 
+		ArcMenu menu = (ArcMenu) findViewById(R.id.arc_menu);
 		
+		
+		final int itemCount = numClients;
+		for (int i = 0; i < itemCount; i++) {
+			ImageView item = new ImageView(this);
+			item.setImageResource(ITEM_DRAWABLES[i]);
 
+			final int position = i;
+			menu.addItem(item, new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					Toast.makeText(AddOrdersActivity.this, "position: " + position, Toast.LENGTH_SHORT).show();
+				}
+			});// Add a menu item
+		}
 	}
 
 
 
 
+	public void createThisTable(View v){
 
 
+		TableApp tables = ((TableApp)getApplicationContext());
+		tables.addTable(new Table(numClients, tableName, System.currentTimeMillis()));
+
+
+		Toast toast = Toast.makeText(this, "Table " + tableName + " added to \"My Tables\".",
+				Toast.LENGTH_SHORT);
+		toast.setGravity(Gravity.CENTER, 0, 0);
+		toast.show();
+
+		finish();
+	}
 
 }
+

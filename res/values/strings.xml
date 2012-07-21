@@ -55,34 +55,15 @@
     <string name="action_label_bak_none">None</string>
     <string name="action_label_bak_gradient">Gradient</string>
     <string name="action_label_bak_image">Image</string>
-    <string name="table_1">Table #1</string>
-    <string name="table_2">Table #2</string>
-    <string name="table_3">Table #3</string>
-    <string name="table_4">Table #4</string>
-    <string name="table_5">Table #5</string>
-    <string name="table_6">Table #6</string>
-    <string name="table_7">Table #7</string>
-    <string name="table_8">Table #8</string>
-    <string name="table_9">Table #9</string>
-    <string name="table_10">Table #10</string>
     <string name="add_orders_now_str">Add orders now?</string>
     <string name="how_many_cli_str">How many clients at this table?</string>
     <string name="call_this_table_str">What should we call this table?</string>
-    <string name="create_this_table_str">Create This Table Now</string>
-    <string name="one_str"> 1   </string>
-    <string name="two_str"> 2   </string>
-    <string name="three_str"> 3   </string>
-    <string name="four_str"> 4   </string>
-    <string name="five_str"> 5   </string>
-    <string name="six_str"> 6   </string>
-    <string name="seven_str"> 7   </string>
-    <string name="eight_str"> 8   </string>
-    <string name="nine_str"> 9   </string>
-    <string name="ten_str"> 10   </string>
+    <string name="create_this_table_str">Create This Table</string>
+    <string name="done_str">Done</string>
     
     <string-array name="yes_no_array">
-        <item>No</item>
         <item>Yes</item>
+        <item>No</item>
     </string-array>
     
     <string-array name="numbers_array">

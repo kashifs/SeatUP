@@ -35,5 +35,11 @@
         <attr name="startHour" format="integer" />
         <attr name="endHour" format="integer" />
     </declare-styleable>
+    
+    	<declare-styleable name="ArcLayout">
+		<attr name="fromDegrees" format="float" />
+		<attr name="toDegrees" format="float" />
+		<attr name="childSize" format="dimension" />
+	</declare-styleable>
 
 </resources>

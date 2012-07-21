@@ -21,9 +21,9 @@
         <activity
             android:name=".MyTablesActivity"
             android:label="@string/title_mytables"
-            android:theme="@style/Theme.D1"
             android:launchMode="singleTop"
-            android:noHistory="true" />
+            android:noHistory="true"
+            android:theme="@style/Theme.D1" />
         <activity
             android:name=".MyGoalsActivity"
             android:label="@string/title_mygoals"
@@ -35,6 +35,8 @@
         <activity
             android:name=".AddTableActivity"
             android:label="@string/title_addtable"
+            android:launchMode="singleTop"
+            android:noHistory="true"
             android:theme="@style/Theme.D1" />
         <activity
             android:name=".AddOrdersActivity"

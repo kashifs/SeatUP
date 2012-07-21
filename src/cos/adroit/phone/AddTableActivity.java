@@ -161,8 +161,8 @@ public class AddTableActivity extends DashboardActivity implements OnItemSelecte
 			tables.addTable(new Table(numClients, tableName, System.currentTimeMillis()));
 
 
-			Toast toast = Toast.makeText(this, "Table " + tableName + " created. Look in " +
-					"\"My Tables\" to edit this table", Toast.LENGTH_LONG);
+			Toast toast = Toast.makeText(this, "Table " + tableName + " added to \"My Tables\".",
+					Toast.LENGTH_SHORT);
 			toast.setGravity(Gravity.CENTER, 0, 0);
 			toast.show();
 
