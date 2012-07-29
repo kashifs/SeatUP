@@ -124,8 +124,8 @@ public class ArcMenu extends RelativeLayout {
                     }
                 }
 
-                mArcLayout.invalidate();
-                mHintView.startAnimation(createHintSwitchAnimation(true));
+//                mArcLayout.invalidate();
+//                mHintView.startAnimation(createHintSwitchAnimation(true));
 
                 if (listener != null) {
                     listener.onClick(viewClicked);

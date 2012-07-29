@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 Capricorn
+ * Copyright (C) 2012 Adroit Designs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,14 +28,10 @@ import android.widget.Toast;
 
 /**
  * 
- * @author Capricorn
+ * @author Adroit Designs
  * 
  */
 public class AddOrdersActivity extends Activity {
-	//	private static final int[] ITEM_DRAWABLES = { R.drawable.composer_camera, R.drawable.composer_music,
-	//			R.drawable.composer_place, R.drawable.composer_sleep, R.drawable.composer_thought, R.drawable.composer_with };
-
-
 
 	private static final int[] ITEM_DRAWABLES = { R.drawable.green_user, R.drawable.blue_user, R.drawable.blue2_user,
 		R.drawable.brown_user, R.drawable.black_user, R.drawable.orange_user, R.drawable.purple_user, R.drawable.red_user,
@@ -62,10 +58,11 @@ public class AddOrdersActivity extends Activity {
 		ArcMenu menu = (ArcMenu) findViewById(R.id.arc_menu);
 		
 		
-		final int itemCount = numClients;
-		for (int i = 0; i < itemCount; i++) {
+//		final int itemCount = numClients;
+		for (int i = 0; i < numClients; i++) {
 			ImageView item = new ImageView(this);
 			item.setImageResource(ITEM_DRAWABLES[i]);
+			
 
 			final int position = i;
 			menu.addItem(item, new OnClickListener() {
@@ -73,6 +70,7 @@ public class AddOrdersActivity extends Activity {
 				@Override
 				public void onClick(View v) {
 					Toast.makeText(AddOrdersActivity.this, "position: " + position, Toast.LENGTH_SHORT).show();
+					setContentView(R.layout.add_order_layout);
 				}
 			});// Add a menu item
 		}
@@ -82,11 +80,8 @@ public class AddOrdersActivity extends Activity {
 
 
 	public void createThisTable(View v){
-
-
 		TableApp tables = ((TableApp)getApplicationContext());
 		tables.addTable(new Table(numClients, tableName, System.currentTimeMillis()));
-
 
 		Toast toast = Toast.makeText(this, "Table " + tableName + " added to \"My Tables\".",
 				Toast.LENGTH_SHORT);

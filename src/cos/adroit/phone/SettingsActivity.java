@@ -51,29 +51,29 @@ public class SettingsActivity extends DashboardActivity
 	protected void onCreate(Bundle savedInstanceState) 
 	{
 		super.onCreate(savedInstanceState);
-		setContentView (R.layout.activity_f3);
+		setContentView (R.layout.settings_layout);
 		setTitleFromActivityLabel (R.id.title_text);
 
 
-		// Get a reference to the AutoCompleteTextView in the layout
-		AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.restaurant_autocomplete);
-		// Get the string array
-		String[] countries = getResources().getStringArray(R.array.restaurants_array);
-		// Create the adapter and set it to the AutoCompleteTextView 
-		ArrayAdapter<String> adapter = 
-				new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, countries);
-		textView.setAdapter(adapter);
-
-
-		textView.setOnItemClickListener(new OnItemClickListener() {
-
-			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-				restaurant_name = (String) arg0.getItemAtPosition(arg2);
-			
-			}
-		});
-		
-		Toast.makeText(this, restaurant_name, Toast.LENGTH_SHORT).show();
+//		// Get a reference to the AutoCompleteTextView in the layout
+//		AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.restaurant_autocomplete);
+//		// Get the string array
+//		String[] countries = getResources().getStringArray(R.array.restaurants_array);
+//		// Create the adapter and set it to the AutoCompleteTextView 
+//		ArrayAdapter<String> adapter = 
+//				new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, countries);
+//		textView.setAdapter(adapter);
+//
+//
+//		textView.setOnItemClickListener(new OnItemClickListener() {
+//
+//			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+//				restaurant_name = (String) arg0.getItemAtPosition(arg2);
+//			
+//			}
+//		});
+//		
+//		Toast.makeText(this, restaurant_name, Toast.LENGTH_SHORT).show();
 	}
 }
 
