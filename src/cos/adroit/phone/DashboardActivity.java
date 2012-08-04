@@ -51,7 +51,7 @@ public abstract class DashboardActivity extends Activity
 	protected void onCreate(Bundle savedInstanceState) 
 	{
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.activity_default);
+		setContentView(R.layout.activity_home);
 	}
 
 	/**
