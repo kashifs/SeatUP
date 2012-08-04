@@ -123,11 +123,7 @@ public class AddTableActivity extends DashboardActivity implements OnItemSelecte
 		if(arg0.getId() == R.id.spinner3)
 			now = (String)arg0.getItemAtPosition(arg2);
 
-
-
-
 		//		Toast.makeText(this, tableName + " " + numClients + " " + now, Toast.LENGTH_SHORT).show();	
-
 
 
 	}

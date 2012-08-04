@@ -17,12 +17,18 @@
 package cos.adroit.phone;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,38 +45,51 @@ public class AddOrdersActivity extends Activity {
 
 	private int numClients;
 	private String tableName;
+	private Context context;
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
+		context = this;
+
 		Bundle extras = getIntent().getExtras();
 		String[] tableData = extras.getStringArray("tableData");
 		tableName = tableData[0];
 		numClients = Integer.parseInt(tableData[1]);
-		
-		
+
+
 		setContentView(R.layout.main);
 		TextView tv = (TextView) findViewById(R.id.tv1);
 		tv.setText(tableData[0]);
 
 		ArcMenu menu = (ArcMenu) findViewById(R.id.arc_menu);
-		
-		
-//		final int itemCount = numClients;
+
+
+		//		final int itemCount = numClients;
 		for (int i = 0; i < numClients; i++) {
 			ImageView item = new ImageView(this);
 			item.setImageResource(ITEM_DRAWABLES[i]);
-			
+
 
 			final int position = i;
 			menu.addItem(item, new OnClickListener() {
 
+				@SuppressWarnings("deprecation")
 				@Override
 				public void onClick(View v) {
-					Toast.makeText(AddOrdersActivity.this, "position: " + position, Toast.LENGTH_SHORT).show();
-					setContentView(R.layout.add_order_layout);
+//					Toast.makeText(AddOrdersActivity.this, "position: " + position, Toast.LENGTH_SHORT).show();
+//					setContentView(R.layout.add_order_layout);
+					
+					
+					int customerNum = position;
+					Intent i = new Intent(getApplicationContext(), AddCustomerOrderActivity.class);
+					i.putExtra("customerNum", customerNum);
+
+					startActivity (i);		
+					
+					
 				}
 			});// Add a menu item
 		}

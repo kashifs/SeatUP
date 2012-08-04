@@ -4,6 +4,9 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+
     <application
         android:name=".TableApp"
         android:icon="@drawable/icon"
@@ -48,6 +51,10 @@
             android:theme="@style/Theme.D1" />
         <activity
             android:name=".SearchActivity"
+            android:label="@string/title_search"
+            android:theme="@style/Theme.D1" />
+        <activity
+            android:name=".AddCustomerOrderActivity"
             android:label="@string/title_search"
             android:theme="@style/Theme.D1" />
     </application>

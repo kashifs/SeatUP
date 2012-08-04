@@ -157,10 +157,5 @@
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="TextBody">
-        <item name="android:textSize">15sp</item>
-        <item name="android:lineSpacingMultiplier">1.1</item>
-        <item name="android:textColor">@android:color/secondary_text_light</item>
-    </style>
 
 </resources>
