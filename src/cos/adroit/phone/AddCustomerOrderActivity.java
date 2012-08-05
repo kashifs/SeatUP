@@ -17,6 +17,9 @@
 package cos.adroit.phone;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -24,20 +27,13 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import android.app.Activity;
-import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -75,7 +71,8 @@ public class AddCustomerOrderActivity extends Activity {
 
 		TextView tv;
 		Spinner spin;
-		String[] spinArray;
+		String[] spinArrayName;
+		String[] spinArrayPrice;
 		ArrayAdapter<String> spinnerArrayAdapter;
 
 
@@ -102,19 +99,32 @@ public class AddCustomerOrderActivity extends Activity {
 
 				Elements items = category.select("item");
 				int i = 1;
-				spinArray = new String[items.size() + 1];
-				spinArray[0] = "";
+				spinArrayName = new String[items.size() + 1];
+				spinArrayName[0] = "";
+				
+				spinArrayPrice = new String[items.size() + 1];
+				spinArrayPrice[0] = "";
 				for(Element item: items){
 
-					spinArray[i++] = item.child(0).text().split("\\(")[0] + "\t" + item.child(2).text();
+					spinArrayName[i] = item.child(0).text().split("\\(")[0];// + "\t" + item.child(2).text();
+					
+					spinArrayPrice[i++] = item.child(2).text();
 
 
 				}
-				spinnerArrayAdapter = 
-						new ArrayAdapter<String>(this,   android.R.layout.simple_spinner_item, spinArray);
+				
+//				Arrays.sort(spinArray);
+				
 
-				spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
-				spin.setAdapter(spinnerArrayAdapter);
+				final List<NamePrice> spinnerContent = new LinkedList<NamePrice>();
+				
+				for(int z = 0; z < spinArrayName.length; z++){
+					spinnerContent.add(new NamePrice(spinArrayName[z], spinArrayPrice[z]));
+				}
+				final MenuSpinnerAdapter adapter = new MenuSpinnerAdapter(spinnerContent, this);
+				spin.setAdapter(adapter);
+				
+
 				
 
 				mainLL.addView(spin);
